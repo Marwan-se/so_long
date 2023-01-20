@@ -6,15 +6,15 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 18:59:28 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/08 00:14:27 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/15 20:42:14 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	ft_strlen(char *c)
+size_t	ft_strlen(char *c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (!c)
@@ -25,8 +25,7 @@ int	ft_strlen(char *c)
 	}
 	return (i);
 }
-
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*pointer;
 	size_t	len;
@@ -78,4 +77,23 @@ char	*ft_strdup(char *str)
 		i++;
 	}
 	return (p);
+}
+
+size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
+{
+	size_t	i;
+	size_t	j;
+
+	if (dstsize == 0 || dstsize <= ft_strlen(dst))
+		return (dstsize + ft_strlen(src));
+	i = ft_strlen(dst);
+	j = 0;
+	while (src[j] != '\0' && i + 1 < dstsize)
+	{
+		dst[i] = src[j];
+		i++;
+		j++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(dst) + ft_strlen(&src[j]));
 }

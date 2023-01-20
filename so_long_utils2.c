@@ -6,13 +6,13 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 00:14:45 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/08 00:15:36 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/11 23:59:38 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static size_t	ft_counter(char const *s, char c)
+static size_t	ft_counter(char *s, char c)
 {
 	size_t	i;
 	size_t	w;
@@ -30,7 +30,7 @@ static size_t	ft_counter(char const *s, char c)
 	return (w);
 }
 
-static char	*ft_mem_word(char const *s, char c)
+static char	*ft_mem_word(char *s, char c)
 {
 	int		i;
 	char	*tab;
@@ -46,7 +46,7 @@ static char	*ft_mem_word(char const *s, char c)
 	return (tab);
 }
 
-static char	**ft_free( char **tab, int i)
+static char	**ft_free(char **tab, int i)
 {
 	while (i >= 0)
 		free(tab[i--]);
@@ -54,7 +54,7 @@ static char	**ft_free( char **tab, int i)
 	return (NULL);
 }
 
-static char	**ft_fixn(char const *s, char c)
+static char	**ft_fixn(char *s, char c)
 {
 	int		i;
 	int		words;
@@ -81,7 +81,7 @@ static char	**ft_fixn(char const *s, char c)
 	return (tab);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
 	if (!s)
 		return (NULL);

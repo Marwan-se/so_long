@@ -6,13 +6,13 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:56:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/11 13:21:22 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/20 00:42:07 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int		p_location(t_mvmnts	*my)
+int		p_location(t_infos *my)
 {
 	my->x = 0;
 	my->y = 0;
@@ -30,4 +30,7 @@ int		p_location(t_mvmnts	*my)
 	return (0);
 }
 
-int		move_left(t_mvmnts*my)
+int		move_left(t_infos *my)
+{
+	
+}

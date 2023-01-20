@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   parsing2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/06 13:31:14 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/19 23:35:24 by msekhsou         ###   ########.fr       */
+/*   Created: 2023/01/14 22:54:19 by msekhsou          #+#    #+#             */
+/*   Updated: 2023/01/17 00:36:46 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	v_map(int fd, int i)
+int	check_map2(char *line)
 {
-	if (fd == 1 && i == 1)
-		return (1);
-	return (ft_printf("error in map"), 0);
-}
+	t_infos	g;
 
-int main(int argc, char **argv)
-{
-	t_infos	my;
-	if (argc != 2)
-		return (ft_printf("error in arguments"), 0);
-	else
+	g.i = 0;
+	g.e = 0;
+	g.c = 0;
+	g.p = 0;
+	while (line[g.i])
 	{
-		my.fd = check_file(argv[1]);
-		my.line = read_map(my.fd);
-		my.map = ft_split(my.line, '\n');
-		my.fd = check_map(my.map, my.line);
-		my.n = check_map2(my.line);
-		if (v_map(my.fd, my.n) == 0)
+		if (line[g.i] != 'P' && line[g.i] != 'C' && line[g.i] != 'E'
+			&& line[g.i] != '1' && line[g.i] != '0' && line[g.i] != '\n')
 			return (0);
-		print_map(&my);
+		if (line[g.i] == 'C')
+			g.c++;
+		if (line[g.i] == 'E')
+			g.e++;
+		if (line[g.i] == 'P')
+			g.p++;
+		g.i++;
 	}
-
+	if (g.p != 1 || g.c == 0 || g.e == 0)
+		return (0);
+	return (1);
 }
