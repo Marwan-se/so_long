@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:31:14 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/19 23:35:24 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/22 21:58:13 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ int	v_map(int fd, int i)
 	return (ft_printf("error in map"), 0);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_infos	my;
+
 	if (argc != 2)
 		return (ft_printf("error in arguments"), 0);
 	else
@@ -35,5 +36,4 @@ int main(int argc, char **argv)
 			return (0);
 		print_map(&my);
 	}
-
 }

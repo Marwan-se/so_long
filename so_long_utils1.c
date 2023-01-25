@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:12:19 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/12 16:14:00 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/20 21:48:39 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strstr(char *s, char *tofind)
 		return ((char *)(s));
 	while (s[i])
 	{
- 		j = 0;
+		j = 0;
 		while (s[i + j] == tofind[j])
 		{
 			if (tofind[j + 1] == '\0')

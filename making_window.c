@@ -6,17 +6,12 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 17:23:47 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/15 20:17:02 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/20 21:56:09 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-// mlx_put_image_to_window(my->mlx_ptr, my->mlxp_win, my->img_, 0, 0);
-// 	mlx_put_image_to_window(my->mlx_ptr, my->mlxp_win, my->img, 500, 1000);
-// 	mlx_put_image_to_window(my->mlx_ptr, my->mlxp_win, my->img, 674, 999);
-// 	mlx_put_image_to_window(my->mlx_ptr, my->mlxp_win, my->img, 50, 50);
-// 	mlx_put_image_to_window(my->mlx_ptr, my->mlxp_win, my->img, 128, 128);
 void	print_wall1(t_infos *my)
 {
 	my->y = 0;

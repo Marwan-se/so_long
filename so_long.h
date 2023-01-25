@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:00:50 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/16 20:01:44 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/24 18:27:37 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 # include <stdlib.h>
 # include <string.h>
 # include <mlx.h>
-#include <unistd.h>
-#include <fcntl.h>
+# include <unistd.h>
+# include <fcntl.h>
 # include "ft_printf/ft_printf.h"
 
-typedef	struct s_infos
+typedef struct s_infos
 {
 	char	*line;
 	int		h;
@@ -36,6 +36,8 @@ typedef	struct s_infos
 	int		fd;
 	int		j;
 	int		f;
+	int		colleatn;
+	int		collcntr;
 	int		mv_count;
 	void	*mlx_ptr;
 	void	*mlxp_win;
@@ -46,7 +48,6 @@ typedef	struct s_infos
 	void	*img_e;
 	char	**map;
 }t_infos;
-
 
 size_t	ft_strlen(char *c);
 char	*ft_strjoin(char *s1, char *s2);
@@ -70,5 +71,14 @@ void	print_exite(t_infos*my);
 void	print_img(t_infos *my);
 char	*read_map(int fd);
 int		check_map2(char *line);
-
+int		p_location(t_infos *my);
+int		moveleft(t_infos *my);
+int		moveright(t_infos *my);
+int		movedown(t_infos *my);
+int		moveup(t_infos *my);
+void	collectibles(t_infos *my);
+int		key(int k, t_infos *my);
+void	key2(int k, t_infos *my, int i);
+int		sa(void);
+void	free_all(t_infos *my);
 #endif

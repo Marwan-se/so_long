@@ -6,31 +6,130 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:56:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/20 00:42:07 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/22 21:45:56 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int		p_location(t_infos *my)
+int	p_location(t_infos *my)
 {
-	my->x = 0;
-	my->y = 0;
-	while (my->map[my->x])
+	my->i = 0;
+	my->j = 0;
+	while (my->map[my->i])
 	{
-		while(my->map[my->x][my->y])
+		while (my->map[my->i][my->j])
 		{
-			if (my->map[my->x][my->y] == 'P')
-			return (0);
-			my->y++;
+			if (my->map[my->i][my->j] == 'P')
+				return (0);
+			my->j++;
 		}
-		my->y = 0;
-		my->x++;
+		my->j = 0;
+		my->i++;
 	}
 	return (0);
 }
 
-int		move_left(t_infos *my)
+int	moveleft(t_infos *my)
 {
-	
+	p_location(my);
+	if (my->map[my->i][my->j - 1] == '1')
+		return (0);
+	if (my->map[my->i][my->j - 1] == '0')
+	{
+		my->map[my->i][my->j] = '0';
+		my->map[my->i][my->j - 1] = 'P';
+		my->mv_count++;
+	}
+	if (my->map[my->i][my->j - 1] == 'C')
+	{
+		my->map[my->i][my->j] = '0';
+		my->map[my->i][my->j - 1] = 'P';
+		my->colleatn++;
+		my->mv_count++;
+	}
+	if (my->map[my->i][my->j - 1] == 'E' && my->collcntr == my->collcntr)
+	{
+		ft_printf("%s", "You win !\n");
+		exit (0);
+	}
+	return (0);
+}
+
+int	moveright(t_infos *my)
+{
+	p_location(my);
+	if (my->map[my->i][my->j + 1] == '1')
+		return (0);
+	if (my->map[my->i][my->j + 1] == '0')
+	{
+		my->map[my->i][my->j] = '0';
+		my->map[my->i][my->j + 1] = 'P';
+		my->mv_count++;
+	}
+	if (my->map[my->i][my->j + 1] == 'C')
+	{
+		my->map[my->i][my->j] = '0';
+		my->map[my->i][my->j + 1] = 'P';
+		my->colleatn++;
+		my->mv_count++;
+	}
+	if (my->map[my->i][my->j + 1] == 'E' && my->collcntr == my->colleatn)
+	{
+		ft_printf("%s", "You win !\n");
+		exit (0);
+	}
+	return (0);
+}
+
+int	movedown(t_infos *my)
+{
+	p_location(my);
+	if (my->map[my->i + 1][my->j] == '1')
+		return (0);
+	if (my->map[my->i + 1][my->j] == '0')
+	{
+		my->map[my->i][my->j] = '0';
+		my->map[my->i + 1][my->j] = 'P';
+		my->mv_count++;
+	}
+	if (my->map[my->i + 1][my->j] == 'C')
+	{
+		my->map[my->i][my->j] = '0';
+		my->map[my->i + 1][my->j] = 'P';
+		my->colleatn++;
+		my->mv_count++;
+	}
+	if (my->map[my->i + 1][my->j] == 'E' && my->collcntr == my->colleatn)
+	{
+		ft_printf("%s", "You win !\n");
+		exit (0);
+	}
+	return (0);
+}
+
+int	moveup(t_infos *my)
+{
+	p_location(my);
+	if (my->map[my->i - 1][my->j] == '1')
+		return (0);
+	if (my->map[my->i - 1][my->j] == '0')
+	{
+		my->map[my->i][my->j] = '0';
+		my->map[my->i - 1][my->j] = 'P';
+		my->mv_count++;
+	}
+	if (my->map[my->i - 1][my->j] == 'C')
+	{
+		my->map[my->i][my->j] = '0';
+		my->map[my->i - 1][my->j] = 'P';
+		my->colleatn++;
+		my->mv_count++;
+	}
+	if (my->map[my->i - 1][my->j] == 'E' && my->collcntr == my->colleatn)
+	{
+		ft_printf("%s", "You win !\n");
+		exit (0);
+	}
+	return (0);
 }

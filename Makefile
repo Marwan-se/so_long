@@ -6,7 +6,7 @@
 #    By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/10 14:34:21 by msekhsou          #+#    #+#              #
-#    Updated: 2023/01/15 02:57:39 by msekhsou         ###   ########.fr        #
+#    Updated: 2023/01/22 21:57:06 by msekhsou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ MLXF = -lmlx -framework OpenGL -framework AppKit
 INC = so_long.h
 PRINTF = ft_printf/libftprintf.a
 SRC = so_long.c so_long_utils.c so_long_utils1.c so_long_utils2.c\
-		movements.c parsing.c print_map.c making_window.c parsing2.c
+		movements.c parsing.c print_map.c making_window.c parsing2.c\
+		collectible_counter.c
 
 OBJ = $(SRC:.c=.o)
 OFILES := $(CFILES:.c=.o)

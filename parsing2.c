@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:54:19 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/17 00:36:46 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/24 17:01:17 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,10 @@ int	check_map2(char *line)
 	if (g.p != 1 || g.c == 0 || g.e == 0)
 		return (0);
 	return (1);
+}
+
+int	sa(void)
+{
+	printf("You Quit!\n");
+	exit(0);
 }

@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 18:59:28 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/15 20:42:14 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/20 21:49:21 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ size_t	ft_strlen(char *c)
 	}
 	return (i);
 }
+
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*pointer;
