@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:33:52 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/17 17:23:32 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/25 19:41:07 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,5 @@ int	check_map(char **map, char *line)
 		}
 		i++;
 	}
-	return (1);
+	return (1);werqerwerwer
 }
