@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:33:52 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/24 17:45:30 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/25 20:36:02 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ int	check_map(char **map, char *line)
 	i = 0;
 	if (maplines(map) != lines(line))
 		return (0);
-	
 	while (map[i])
 	{
 		j = 0;
@@ -109,7 +108,7 @@ int	check_map(char **map, char *line)
 		}
 		i++;
 	}
-	if (i > 256 || (ft_strlen(map[0]) >= 244))
-		return(0);
+	// if (i > 256 || (ft_strlen(map[0]) >= 244))
+	// 	return(0);
 	return (1);
 }

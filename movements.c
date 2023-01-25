@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:56:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/22 21:45:56 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/25 20:22:56 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	moveleft(t_infos *my)
 		my->colleatn++;
 		my->mv_count++;
 	}
-	if (my->map[my->i][my->j - 1] == 'E' && my->collcntr == my->collcntr)
+	if (my->map[my->i][my->j - 1] == 'E' && my->collcntr == my->colleatn)
 	{
 		ft_printf("%s", "You win !\n");
 		exit (0);
