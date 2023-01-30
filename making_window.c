@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 17:23:47 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/25 20:26:15 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/26 22:25:20 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ void	print_exite(t_infos *my)
 			{
 				mlx_put_image_to_window(my->mlx_ptr, my->mlxp_win,
 					my->img_0, my->x, my->y);
-					mlx_put_image_to_window(my->mlx_ptr, my->mlxp_win,
+				mlx_put_image_to_window(my->mlx_ptr, my->mlxp_win,
 					my->img_e, my->x, my->y);
 			}
 			my->x += 64;

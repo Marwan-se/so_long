@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 19:14:28 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/23 04:35:38 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/26 06:51:28 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ void	print_map(t_infos *my)
 	&my->i, &my->j);
 	my->img_0 = mlx_xpm_file_to_image(my->mlx_ptr, "./image/floor.xpm", \
 	&my->i, &my->j);
+	function(my);
 	print_img(my);
 	mlx_hook(my->mlxp_win, 2, 0, key, my);
 	mlx_hook(my->mlxp_win, 17, 0, sa, NULL);

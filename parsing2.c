@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:54:19 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/24 17:01:17 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/26 22:59:45 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,14 @@ int	sa(void)
 {
 	printf("You Quit!\n");
 	exit(0);
+}
+
+void	function(t_infos *my)
+{
+	if (my->img_0 == NULL || my->img_1 == NULL || \
+		my->img_c == NULL || my->img_e == NULL || my->img_p == NULL)
+	{
+		ft_printf("check_imgs!!\n");
+		exit(1);
+	}
 }

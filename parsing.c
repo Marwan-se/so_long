@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:33:52 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/25 20:36:02 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/26 22:51:27 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ char	*read_map(int fd)
 	char	*buf;
 	int		ret;
 	char	*line;
+	char	*tmp;
 
 	buf = (char *)malloc(sizeof(char) * (2));
-	line = calloc(0, 0);
+	line = calloc(1, 1);
 	if (!buf)
 		return (NULL);
 	ret = 1;
@@ -42,7 +43,9 @@ char	*read_map(int fd)
 			return (NULL);
 		}
 		buf[ret] = '\0';
+		tmp = line;
 		line = ft_strjoin(line, buf);
+		free(tmp);
 	}
 	return (free(buf), line);
 }
@@ -108,7 +111,5 @@ int	check_map(char **map, char *line)
 		}
 		i++;
 	}
-	// if (i > 256 || (ft_strlen(map[0]) >= 244))
-	// 	return(0);
-	return (1);
+	return (i <= 256 && ft_strlen(map[0]) < 244);
 }
