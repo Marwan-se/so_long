@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:00:50 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/30 09:43:16 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/31 20:12:09 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ typedef struct s_infos
 	char	**map;
 }t_infos;
 
+void	free_map(char **map);
 size_t	ft_strlen(char *c);
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strchr(char *s, int c);
@@ -79,7 +80,7 @@ int		moveup(t_infos *my);
 void	collectibles(t_infos *my);
 int		key(int k, t_infos *my);
 void	key2(int k, t_infos *my, int i);
-int		sa(void);
+int		esc(t_infos *my);
 void	free_all(t_infos *my);
 void	function(t_infos *my);
 int		v_path(char	**i_map);

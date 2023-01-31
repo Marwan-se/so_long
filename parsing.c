@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:33:52 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/26 22:51:27 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/31 20:12:18 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,14 +73,14 @@ int	check_file(char *av)
 	fd = open (av, O_RDONLY);
 	if (fd == -1)
 	{
-		write(2, "error", 5);
+		write(2, "error\n", 6);
 		exit (0);
 	}
 	if (ft_strstr(av, ".ber"))
 		return (fd);
 	else
 	{
-		write(2, "error", 5);
+		write(2, "error\n", 6);
 		exit (0);
 	}
 	return (fd);

@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:54:19 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/01/26 22:59:45 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/01/31 11:24:41 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,15 @@ int	check_map2(char *line)
 			g.p++;
 		g.i++;
 	}
-	if (g.p != 1 || g.c == 0 || g.e == 0)
+	if (g.p != 1 || g.c == 0 || g.e != 1)
 		return (0);
 	return (1);
 }
 
-int	sa(void)
+int	esc(t_infos *my)
 {
 	printf("You Quit!\n");
+	free_map(my->map);
 	exit(0);
 }
 
